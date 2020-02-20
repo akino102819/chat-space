@@ -1,36 +1,14 @@
 # README
 
-## groups_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|users_group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-
-
-## massage_groups
-|Column|Type|Options|
-|------|----|-------|
-|massage_id|integer|null: false, foreign_key: true|
-|massages_group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :massage
-- belongs_to :group
-
-
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|users_group_id|integer|null: false, foreign_key: true|
-|massages_group_id|integer|null: false, foreign_key: true|
+|groups_users_id|integer|null: false, foreign_key: true|
+|massages_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :massages
-- has_many :users
+- has_many :groups_users
 
 
 ## massages
@@ -51,10 +29,21 @@
 |------|----|-------|
 |name|string|null: false, unipue: true|
 |email|string|null: false, unipue: true|
-|encrypted_password|string|null: false, foreign_key: true|
+|password|string|null: false|
 |massages_id|integer|null:false, foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
+|groups_users_id|integer|null:false, foreign_key: true|
 
 ### Association
 - has_many :massages
-- has_many :groups
+- has_many :groups_users
+
+## groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
