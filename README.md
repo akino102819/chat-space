@@ -3,7 +3,7 @@
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
@@ -13,8 +13,8 @@
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|body|text|NULL|
-|image|string|NULL|
+|body|text｜
+|image|string｜
 |group_id|integer|null: false foreign_key: true|
 |user_id|integer|null: false foreign_key: true|
 
