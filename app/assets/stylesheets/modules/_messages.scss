@@ -87,7 +87,6 @@ html,body{
       line-height: 40px;
       color: #38aef0;
       text-decoration: none ;
-      
       padding: 12px 20px;
       border: 1px solid #38aef0;
     }
@@ -99,6 +98,7 @@ html,body{
   height: calc(100% - 190px);
   padding-left: 40px;
   .message{
+    text-decoration: none;
     &__sent{
       padding-top: 35px;
       display: flex;
