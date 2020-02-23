@@ -1,0 +1,157 @@
+*{
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height:100%
+}
+
+.chat-side{
+  width: 300px;
+  text-decoration: none;
+}
+.side-headar{
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__box{
+    height: 20px;
+    width: 260px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    &__name {
+      color: #ffffff; 
+    }
+    &__icons{
+      width: 60px;
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      a{
+        padding-left: 5px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.groups{
+  background-color:#2f3e51;
+  height: calc(100% - 100px);
+  padding: 0 20px;
+  .group{
+    text-decoration: none;
+    color: #ffffff;
+    }
+  &__group-name{
+    font-size: 15px;
+    padding: 20px 0 5px 0;
+  }
+  &__message-latest{
+    font-size: 11px;
+  }
+}
+
+
+.chat-main{
+  width: calc(100vw - 300px);
+}
+.main-headar{
+  height: 100px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  &__now__guroup-current {
+    font-size: 20px;
+    color: #333333;
+    margin-top: 35px;
+  }
+  &__now__guroup-menber {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 15px;
+  }
+  .main-headar__edit{
+    height: 40px;
+    margin: 28px 0;
+    a{
+      line-height: 40px;
+      color: #38aef0;
+      text-decoration: none ;
+      
+      padding: 12px 20px;
+      border: 1px solid #38aef0;
+    }
+  }
+}
+
+.messages{
+  background-color: #fafafa;
+  height: calc(100% - 190px);
+  padding-left: 40px;
+  .message{
+    &__sent{
+      padding-top: 35px;
+      display: flex;
+      &__member{
+        color:#333333;
+        font-size: 16px;
+        padding-right: 5px;
+      }
+      &__up-time{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__comment{
+      padding: 12px 0 11px 0;
+      color: #434A54;
+      font-size: 14px;
+    }
+  }
+}
+.form{
+  background-color: #d2d2d2;
+  height: 90px;
+  padding: 20px 40px;
+  .form__input{
+    display: flex;
+    height: 50px;
+    &__send{
+      color: #ffffff;
+      background-color: #38aef0;
+      margin-left: 15px;
+      padding: 0 30px;
+    } 
+  }
+}
+
+.form__input__box{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #ffffff;
+  &__text{
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    border-style: none;    
+  }
+  &__image{
+    position: absolute;
+      top: 10px;
+      right: 10px;
+    &__file{
+      display: none;
+    }
+  }
+}

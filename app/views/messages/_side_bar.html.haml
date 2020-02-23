@@ -1,0 +1,19 @@
+.chat-side
+  .side-headar
+    .side-headar__box<>
+      %p.side-headar__box__name
+        name
+      %ul.side-headar__box__icons
+        %li.side-hedar__box__new-edit 
+          = link_to "#", class:"a btn" do
+            =icon("fas", "edit")
+        %li.side-hedar__box__creait
+          = link_to "#", class:"a btn" do
+            =icon("fas", "cog")
+
+  .groups
+    = link_to "#", class:"group" do
+      .groups__group-name
+        groups 
+      .groups__message-latest 
+        まだメッセージがありません

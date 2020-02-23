@@ -1,0 +1,29 @@
+.chat-main
+
+  .main-headar
+    .main-headar__now<>
+      .main-headar__now__guroup-current
+        nemes
+      .main-headar__now__guroup-menber
+        Member:name
+    .main-headar__edit
+      =link_to 'Edit',"#",class: "a btn"
+
+  .messages
+    .message
+      .message__sent
+        %p.message__sent__member
+          name
+        %p.message__sent__up-time
+          2020/2/22(Wed) 0.0.0
+      %p.message__comment
+        あいうえお
+
+  .form
+    .form__input
+      .form__input__box
+        %input.form__input__box__text{:name => "body", :placeholder => "type a messege", :type => "text"}
+        %label.form__input__box__image
+          = icon('fas', 'image')
+          %input.form__input__box__image__file{:type => "file"}
+      %input.form__input__send{:type => "submit", :value => "Send"}
