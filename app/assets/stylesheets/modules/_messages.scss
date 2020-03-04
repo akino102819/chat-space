@@ -143,7 +143,6 @@ html,body{
 .form__input__box{
   position: relative;
   width: 100%;
-  padding: 0 10px;
   background-color: #ffffff;
   &__text{
     height: 50px;
@@ -153,7 +152,7 @@ html,body{
   }
   &__image{
     position: absolute;
-      top: 10px;
+      top: 15px;
       right: 10px;
     &__file{
       display: none;
